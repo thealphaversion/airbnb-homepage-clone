@@ -1,0 +1,24 @@
+.landing-image-container {
+    margin: 0;
+}
+
+.landing-image {
+    width: 100vw;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .landing-component-container {
+        height: 60vh;
+        position: relative;
+    }
+
+    .landing-image {
+        height: 60vh;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}

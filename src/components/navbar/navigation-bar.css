@@ -1,0 +1,184 @@
+.navbar {
+    transition: all 0.4s;
+    font-size: 1.05rem;
+}
+
+/* navbar brand */
+
+.navbar .navbar-brand {
+    display: flex;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Secular One";
+    padding-left: 7vw;
+}
+
+.navbar-brand-icon {
+    font-size: 2.5rem;
+}
+
+/* nav links */
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-item {
+    position: relative;
+}
+
+.line {
+    margin-left: 15px;
+}
+
+#collapsingNavbar {
+    margin: 0px 100px 0px 200px;
+}
+
+.navbar-nav .active {
+    color: #fff;
+}
+
+.nav-item .nav-link:hover {
+    color: #ebebeb;
+}
+
+.line:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 2px;
+    background-color: white;
+}
+
+.active:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 15px !important;
+    height: 2px;
+    background-color: white;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-button {
+    border-radius: 24px;
+    padding: 0px 8px;
+}
+
+.hover-button-light {
+    color: black;
+}
+
+.hover-button:hover {
+    border-radius: 24px;
+    background-color: rgba(233, 233, 233, 0.308);
+}
+
+.dropdown-light {
+    color: #464646;
+    text-decoration: none;
+}
+
+.dropdown-light:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.joined-button {
+    border-radius: 24px;
+    padding: 0px 8px;
+    background-color: #fff;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.joined-button-light {
+    border-radius: 24px;
+    padding: 0px 8px;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.1),
+        0 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* search */
+
+.search-container {
+    display: none;
+    margin: 12px 0px;
+}
+
+.search-button {
+    position: absolute;
+    left: 10vw;
+    background-color: white;
+    padding: 0px 8px;
+    margin: 8px 5px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 100;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.search-button:hover {
+    color: black;
+}
+
+.search-input {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    min-width: 80vw;
+    padding: 8px 10px 8px 45px;
+    border: none;
+    font-weight: 300;
+    border-radius: 24px;
+    transition: all 0.2s;
+}
+
+/* responsiveness */
+@media (max-width: 992px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #555;
+    }
+
+    .navbar-brand-icon {
+        font-size: 1.5rem;
+    }
+
+    .navbar .navbar-brand {
+        display: none;
+        padding-left: 0px;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
