@@ -18,6 +18,15 @@
     font-size: 2.5rem;
 }
 
+.navbar-brand-icon-light {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.logo-light {
+    color: black;
+}
+
 /* nav links */
 
 .navbar .nav-link {

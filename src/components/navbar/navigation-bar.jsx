@@ -8,8 +8,6 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-import CentralSearchBar from "../central-search-bar/central-search-bar";
-
 // css imports
 import "./navigation-bar.css";
 
@@ -27,10 +25,17 @@ function NavigationBar(props) {
             >
                 <div>
                     <a href="/" type="button" className="navbar-brand mr-0">
-                        <div className="navbar-brand-icon">
+                        <div
+                            className={
+                                navBar
+                                    ? "navbar-brand-icon-light"
+                                    : "navbar-brand-icon"
+                            }
+                        >
                             <FontAwesomeIcon icon={faAirbnb} size={"1x"} />
                         </div>
-                        &nbsp;&nbsp;airbnb
+                        &nbsp;&nbsp;
+                        <div className={navBar ? "logo-light" : ""}>airbnb</div>
                     </a>
                     <div className="search-container">
                         <a type="button" href="/" className="search-button">
