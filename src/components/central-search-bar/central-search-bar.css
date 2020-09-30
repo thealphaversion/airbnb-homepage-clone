@@ -1,0 +1,82 @@
+.central-search-bar {
+    margin-top: 80px;
+    display: flex;
+    position: absolute;
+    top: 30px;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+}
+
+.central-search-bar-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0px;
+    row-gap: 0px;
+    grid-auto-rows: minmax(auto, auto);
+    min-height: 50px;
+    min-width: 50vw;
+    border-radius: 36px;
+}
+
+.central-search-buttons {
+    display: inline-block;
+    background-color: rgb(252, 252, 252);
+    padding: 8px 0px;
+    border-radius: 36px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.central-search-buttons:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(206, 206, 206, 0.733);
+    color: black;
+}
+
+.central-search-submit-button {
+    display: inline-block;
+    background-color: rgb(235, 72, 72);
+    padding: 20px 0px;
+    border-radius: 36px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.central-search-submit-button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(212, 22, 22);
+    color: black;
+}
+
+.central-search-button-title {
+    font-size: 0.95rem;
+    margin-left: 25px;
+    font-family: "Secular One";
+    text-align: start;
+}
+
+.central-search-button-subtitle {
+    font-size: 0.9rem;
+    text-align: start;
+    margin-left: 25px;
+}
+
+/* responsiveness */
+@media (max-width: 992px) {
+    .central-search-bar {
+        display: none;
+    }
+}

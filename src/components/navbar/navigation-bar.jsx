@@ -1,5 +1,5 @@
 // package imports
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAirbnb } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -8,21 +8,13 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
+import CentralSearchBar from "../central-search-bar/central-search-bar";
+
 // css imports
 import "./navigation-bar.css";
 
-function NavigationBar() {
-    const [navBar, setNavBar] = useState(false);
-
-    const modifyNavbar = () => {
-        if (window.scrollY >= 75) {
-            setNavBar(true);
-        } else {
-            setNavBar(false);
-        }
-    };
-
-    window.addEventListener("scroll", modifyNavbar);
+function NavigationBar(props) {
+    const { navBar } = props;
 
     return (
         <React.Fragment>
@@ -41,7 +33,7 @@ function NavigationBar() {
                         &nbsp;&nbsp;airbnb
                     </a>
                     <div className="search-container">
-                        <a type="button" className="search-button">
+                        <a type="button" href="/" className="search-button">
                             <FontAwesomeIcon icon={faSearch} size={"1x"} />
                         </a>
                         <input
@@ -57,30 +49,30 @@ function NavigationBar() {
                 >
                     <ul className="navbar-nav mx-auto text-center">
                         <li className="nav-item active line">
-                            <a href="#" type="button" className="nav-link">
+                            <a href="/" type="button" className="nav-link">
                                 Places to stay{" "}
                                 <span className="sr-only">(current)</span>
                             </a>
                         </li>
                         <li className="nav-item line">
-                            <a href="#" type="button" className="nav-link">
+                            <a href="/" type="button" className="nav-link">
                                 Experiences
                             </a>
                         </li>
                         <li className="nav-item line">
-                            <a href="#" type="button" className="nav-link">
+                            <a href="/" type="button" className="nav-link">
                                 Online Experiences
                             </a>
                         </li>
                     </ul>
                     <ul className="nav navbar-nav flex-row justify-content-center flex-nowrap">
                         <li className="nav-item">
-                            <a className="nav-link" type="button" href="">
+                            <a className="nav-link" type="button" href="/">
                                 <i className="fa fa-facebook mr-1"></i>
                             </a>{" "}
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" type="button" href="">
+                            <a className="nav-link" type="button" href="/">
                                 <i className="fa fa-twitter"></i>
                             </a>{" "}
                         </li>
@@ -100,6 +92,7 @@ function NavigationBar() {
                     <li className="nav-item dropdown hover-button">
                         <a
                             type="button"
+                            href="/"
                             className={
                                 navBar
                                     ? "hover-button-light dropdown-light dropdown-toggle"
@@ -110,11 +103,11 @@ function NavigationBar() {
                             <FontAwesomeIcon icon={faGlobe} size={"1x"} />
                         </a>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#" type="button">
+                            <a className="dropdown-item" href="/" type="button">
                                 <FontAwesomeIcon icon={faGlobe} size={"1x"} />
                                 &nbsp;English (IN)
                             </a>
-                            <a className="dropdown-item" href="#" type="button">
+                            <a className="dropdown-item" href="/" type="button">
                                 <FontAwesomeIcon
                                     icon={faDollarSign}
                                     size={"1x"}
@@ -132,6 +125,7 @@ function NavigationBar() {
                     >
                         <a
                             type="button"
+                            href="/"
                             className="nav-link dropdown"
                             data-toggle="dropdown-menu"
                         >
@@ -148,11 +142,11 @@ function NavigationBar() {
                             />
                         </a>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#" type="button">
+                            <a className="dropdown-item" href="/" type="button">
                                 <FontAwesomeIcon icon={faBars} size={"1x"} />
                                 &nbsp;English (IN)
                             </a>
-                            <a className="dropdown-item" href="#" type="button">
+                            <a className="dropdown-item" href="/" type="button">
                                 <FontAwesomeIcon
                                     icon={faUserCircle}
                                     size={"1x"}

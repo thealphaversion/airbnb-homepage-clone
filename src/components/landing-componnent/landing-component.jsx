@@ -1,9 +1,10 @@
 // package imports
-import React from "react";
+import React, { useState } from "react";
 
 // component imports
 // import NavbarComponent from "../navbar/navbar";
 import NavigationBar from "../navbar/navigation-bar";
+import CentralSearchBar from "../central-search-bar/central-search-bar";
 import BannerBlob from "./banner-blob/banner-blob";
 
 // data imports
@@ -13,9 +14,22 @@ import assets from "../../data/assets.json";
 import "./landing-component.css";
 
 function LandingComponent() {
+    const [navBar, setNavBar] = useState(false);
+
+    const modifyNavbar = () => {
+        if (window.scrollY >= 75) {
+            setNavBar(true);
+        } else {
+            setNavBar(false);
+        }
+    };
+
+    window.addEventListener("scroll", modifyNavbar);
+
     return (
         <div className="landing-component-container">
-            <NavigationBar></NavigationBar>
+            <NavigationBar navBar={navBar}></NavigationBar>
+            <CentralSearchBar></CentralSearchBar>
             <BannerBlob title="Explore nearby"></BannerBlob>
             <div className="landing-image-container">
                 <img
